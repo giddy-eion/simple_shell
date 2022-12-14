@@ -39,5 +39,7 @@ int execute(char **args, char **front)
 	{
 		if (errno == EACCES)
 			ret = (create_error(args, 126));
+		else
+			ret = (create_error(args, 127));
 	}
 }
