@@ -43,7 +43,7 @@ char *get_location(char *command)
 	}
 	free_list(head);
 
-	return (NULL)
+	return (NULL);
 }
 
 /**
