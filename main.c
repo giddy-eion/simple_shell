@@ -42,7 +42,6 @@ int execute(char **args, char **front)
 		else
 			ret = (create_error(args, 127));
 	}
-
 	else
 	{
 		child_pid = fork();
