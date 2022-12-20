@@ -93,7 +93,7 @@ char **sparse_str(char *line, char **env)
  */
 void prompt(void)
 {
-	char *prompt = {"s "};
+	char *prompt = {"{^_^} "};
 	char *buffer = getcwd(NULL, 0);
 
 	if (isatty(STDIN_FILENO))
