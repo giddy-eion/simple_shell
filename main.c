@@ -23,6 +23,11 @@ int main(int ac __attribute__((unused)), char **av, char **env)
 		/*separates string to get command and atgs*/
 		args = sparse_str(line, env);
 
+		if (NULL == line)
+		{
+			continue;
+		}
+
 		if ((_strcmp(args[0], "\n") != 0) && (_strcmp(args[0], "env") != 0))
 		{
 			count += 1;

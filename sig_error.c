@@ -6,7 +6,7 @@
  */
 void handle_signal(int signal)
 {
-	char *prompt = {"\n{^_^} "};
+	char *prompt = {"\n($) "};
 	(void) signal;
 
 	write(STDOUT_FILENO, prompt, _strlen(prompt));
@@ -23,7 +23,10 @@ void handle_signal(int signal)
 int *_error(char *argv, int __attribute__((unused))count, char __attribute__((unused)) *args)
 {
 	write(2, argv, _strlen(argv));
-	perror(" ");
+	write(2, ": ", 2);
+	write(2, args, _strlen(args));
+	write(2, ": ", 2);
+	perror(NULL);
 
 	return (0);
 }
