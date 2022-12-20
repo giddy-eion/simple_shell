@@ -20,17 +20,9 @@ void handle_signal(int signal)
  * @args: command to be put in
  * Return: 0 on success
  */
-int *_error(char *argv, int count, char *args)
+int *_error(char *argv, int __attribute__((unused))count, char __attribute__((unused)) *args)
 {
-	char *number;
-
-	number = _itoa(count, 10);
-
 	write(2, argv, _strlen(argv));
-	write(2, ": ", 2);
-	write(2, number, _strlen(number));
-	write(2, ": ", 2);
-	write(2, args, _strlen(args));
 	perror(" ");
 
 	return (0);
