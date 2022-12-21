@@ -1,4 +1,4 @@
-#include "main.h"
+#include "simpleshell.h"
 
 /**
  * main - to pass betty check
