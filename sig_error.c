@@ -20,7 +20,7 @@ void handle_signal(int signal)
  * @args: command to be put in
  * Return: 0 on success
  */
-int *_error(char *argv, int __attribute__((unused))count, char __attribute__((unused))*args)
+int *_error(char *argv, int count __attribute__((unused)), char *args)
 {
 	write(2, argv, _strlen(argv));
 	write(2, ": ", 2);
