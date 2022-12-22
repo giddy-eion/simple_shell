@@ -70,4 +70,3 @@ int _stat(char **cmd, char **path)
 	free(path);
 	return (0);
 }
-
