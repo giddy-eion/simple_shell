@@ -23,7 +23,7 @@ int main(int ac __attribute__((unused)), char **av, char **env)
 		/*separates string to get command and atgs*/
 		args = sparse_str(line, env);
 
-		if (NULL == line)
+		if (line == NULL)
 		{
 			continue;
 		}
